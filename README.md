@@ -1,6 +1,6 @@
 ## Website Performance Optimization portfolio project
 
-To check Page Speed Insights Score, use the follow: http://marc1981.github.io/frontend-nanodegree-mobile-portfolio/
+To check Page Speed Insights Score, use the following: http://marc1981.github.io/frontend-nanodegree-mobile-portfolio/
 
 Moved essential CSS to HTML header.
 
@@ -35,7 +35,7 @@ For JavaScript section:
 restructured entire page:
 
 The reason why I restructured the page, is that the version provided
-is unncecessarily complicated, poorly designed, and just plain ridiculous to work with. 
+is unnecessarily complicated, poorly designed, and just plain ridiculous to work with. 
 I was not about to try to fix that mess. Do you know what happens when you fix up a piece of garbage? 
 You have a better looking piece of garbage. So if you want garbage, I'll return the thing you gave me. 
 Otherwise, here's my cleaner version. I don't have those background pizzas that move when you scroll, 
