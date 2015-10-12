@@ -1,0 +1,333 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <title>Pizza!</title>
+    <style type="text/css">
+
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -box-sizing: border-box;
+      }
+
+      .slice{
+        margin: 10px 50px 10px;
+        height: 100px;
+        opacity: .3;
+      }
+
+      .pizzaholder{
+            position: relative;
+            width: 100%;
+            margin-top: 100px;
+            -webkit-animation-name: bounce2; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 18s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+            animation-name: bounce2;
+            animation-duration: 18s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+
+          .pizzaholder{animation-timing-function: linear;}
+
+          @-webkit-keyframes bounce2 {
+              0%   { left:-10%; }
+              50%  { left:10%; }
+              100% { left:-10%; }
+          }
+
+          @keyframes bounce2 {
+              0%   { left:-10%; }
+              50%  { left:10%; }
+              100% { left:-10%; }
+          }
+
+          .pizzaholder2{
+            margin-top: 100px;
+            width: 100%;
+            position: relative;
+            -webkit-animation-name: bounce; /* Chrome, Safari, Opera */
+            -webkit-animation-duration: 18s; /* Chrome, Safari, Opera */
+            -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
+            -webkit-animation-direction: alternate; /* Chrome, Safari, Opera */
+            animation-name: bounce;
+            animation-duration: 18s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+
+          .pizzaholder2{animation-timing-function: linear;}
+
+          @-webkit-keyframes bounce {
+              0%   { left:10%; }
+              50%  { left:-10%; }
+              100% { left:10%; }
+          }
+
+          @keyframes bounce {
+              0%   { left:10%; }
+              50%  { left:-10%; }
+              100% { left:10%; }
+          }
+
+          .backing{
+            position: absolute;
+            width: 100%;
+            top: 0px;
+            z-index: -2;
+            background-color: black;
+          }
+
+          .fore{
+            width: 85%;
+            height: 800px;
+            position: absolute;
+            text-align: center;
+            margin: 0 10% 0 10%;
+            z-index: 1;
+          }
+
+          .subbacking{
+            width: 85%;
+            height: 800px;
+            position: absolute;
+            text-align: center;
+
+            margin: 10px 100px 0 100px;
+            z-index: -1;
+          }
+          .shop{
+            margin-top:10px;
+          }
+
+          .overFlow_container{
+            height: 305px;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin: 40px 10px 40px 40px;
+            border: 2px solid gray;
+            box-shadow: 1px 1px 10px black;
+            background-color: #e8e8e8;
+          }
+
+          .sizeSelector{
+            width: 110px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            border: 3px solid black;
+          }
+
+          #pizzaSizers{
+            margin: 0 0 0 30px;
+          }
+
+          #sizeLabel{
+            margin-top: 15px;
+            font-weight: bolder;
+            font-size: 1.2em;
+          }
+
+          .sizeChoice{
+            margin-top: 15px;
+            font-size: 1.2em;
+          }
+          .lookAt{
+            margin: 30px 0 0 0px;
+            bottom: -10px;
+          }
+          .types{
+            text-align: left;
+            margin-left: 10px;
+          }
+    </style>
+</head>
+<body>
+  <div class="backing">
+    <div class="subbacking">
+      <div class="pizzaholder">
+        <img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png">
+      </div>
+      <div class="pizzaholder2">
+        <img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png">
+      </div>
+      <div class="pizzaholder">
+        <img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png">
+      </div>
+      <div class="pizzaholder2">
+        <img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png">
+      </div>
+      <div class="pizzaholder">
+        <img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png">
+      </div>
+      <div class="pizzaholder2">
+        <img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png"><img class="slice" src="images/pizza.png">
+      </div>
+    </div>
+  </div>
+  <div class="fore">
+    <div class="container">
+      <div id="header" class="row">
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-12">
+              <h1>Cam's Pizzeria</h1>
+              <div class="row">
+                <div id="menu" class="col-md-12 ">
+                  <form action="#randomPizzas">
+                    <input type="submit" value="Menu">
+                  </form>
+                  <form action="#ingredients">
+                    <input type="submit" value="Our Ingredients">
+                  </form>
+                  <form action="#locations">
+                    <input type="submit" value="Locations">
+                  </form>
+                  <form action="#" onsubmit="alert('Thanks for clicking! This button doesn\'t do anything because this is a fake pizzeria :\)')">
+                    <input type="submit" value="Contact Us">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="movingPizzas1" class="col-md-6">
+        </div>
+      </div>
+      <div id="callToAction" class="row">
+        <div class="col-md-4 col-md-offset-1">
+          <img src="images/pizzeria.jpg" width="85%" class="img-responsive shop"> <!-- Image credit to: http://commons.wikimedia.org/wiki/File:HK_TST_night_%E5%98%89%E8%98%AD%E9%81%93_Granville_Road_restaurant_Paisano's_Pizzeria_pizza_Dec-2013.JPG -->
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <h2>We Have Hundreds of Pizza Recipes!</h2>
+              <p>At Cam's Pizzeria, we know you want options. Pepperoni? Boring. Cheese? No way! Sausage? C'mon, let's get creative.</p>
+              <p>We have every pizza ingredient imaginable in our kitchen because we know you take choice seriously. Take a look through our menu of hundreds of pizza options and we know that you'll find something you love.</p>
+              <form action="#randomPizza">
+                <input type="submit" value="Pick a Pizza Now!">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ingredients" class="row">
+        <div class="col-md-8 col-md-push-2">
+          <div class="row">
+            <div class="col-md-12 centered">
+              <h2>Ingredients!</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <p>We've scoured the planet for the best pizza ingredients. Our crack team of ingredient specialists are on constant lookout for new and interesting pizza ingredients.</p>
+              <p>We have classic meats like pepperoni, sausage, and barbecue chicken. But you can find even more fun meats like coppa, kielbasa and soylent green on our menu too.</p>
+              <p>Not interested in meat? No problem! We love our veggies too :) We have everything from arugula to zucchini.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="locations" class="row">
+        <div class="col-md-12">
+          <h2 style="text-align: center">Locations!</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Pizza Road</h3>
+              <p>1800 Pizza Road<br>San Francisco, CA<br>01010<br>555-555-5555</p>
+            </div>
+            <div class="col-md-6">
+              <h3>Classic Pie Way</h3>
+              <p>999 Classic Pie Way<br>New York, NY<br>00100<br>555-555-5555</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <script>
+          window.onload = function(){
+            document.getElementById("smallPie").onclick=function(){
+              document.getElementById("pizzaSizers").src = "images/smallPizza.png";
+              document.getElementById("sizeLabel").innerHTML = "Small";
+          }
+          document.getElementById("mediumPie").onclick=function(){
+              document.getElementById("pizzaSizers").src = "images/mediumPizza.png";
+              document.getElementById("sizeLabel").innerHTML = "Medium";
+          }
+            document.getElementById("largePie").onclick=function(){
+              document.getElementById("pizzaSizers").src = "images/largePizza.png";
+              document.getElementById("sizeLabel").innerHTML = "Large";
+          }
+        }
+        </script>
+          <h2 style="text-align: center">Our Pizzas!</h2>
+          <div class="row">
+            <div class="col-md-12">
+              <em>What size pizza would you like? Use the buttons below to change pizza sizes.</em>
+            </div>
+            <div class="row">
+              <div id="pizzaSize" class="col-md-8 col-md-offset-2">
+                <button class="sizeSelector" id="smallPie"><h2>Small</h2></button>
+                <button class="sizeSelector" id="mediumPie"><h2>Medium</h2></button>
+                <button class="sizeSelector" id="largePie"><h2>Large</h2></button>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-md-3 col-md-offset-3 sizeChoice">
+                Current Size Choice:
+              </div>
+              <div class="col-md-1" id="sizeLabel">
+                Small
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3"></div>
+              <div class="col-md-8 lookAt">
+                Check Out Our Insane Specialty's:
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-2">
+                <img id="pizzaSizers" class="img-responsive" src="images/smallPizza.png">
+              </div>
+              <div class="col-md-10">
+                <div class="overFlow_container" id="randomPizza">
+                  <div id="randomPizzas" class="row">
+                    <div id="pizza0" class="randomPizzaContainer types" style="width:33.33%;">
+                      <div class="col-md-12 first">
+                        <h4>The Udacity Special</h4>
+                        <ul>
+                          <li>Turkey</li>
+                          <li>Tofu</li>
+                          <li>Cauliflower</li>
+                          <li>Sun Dried Tomatoes</li>
+                          <li>Velveeta Cheese</li>
+                          <li>Red Sauce</li>
+                          <li>Whole Wheat Crust</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div id="pizza1" class="randomPizzaContainer types" style="width:33.33%;">
+                      <div class="col-md-12">
+                        <h4>The Cameron Special</h4>
+                        <ul>
+                          <li>Chicken</li>
+                          <li>Hot Sauce</li>
+                          <li>White Crust</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div id="footer" class="col-md-12">Thanks for visiting! &copy; 2014 Udacity</div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
