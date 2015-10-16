@@ -15,8 +15,9 @@ img {
   vertical-align: middle;
 }
 .img-responsive {
-
-margin: 20px 15px 0 0;
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
   height: auto;
 }
 .img-rounded {
